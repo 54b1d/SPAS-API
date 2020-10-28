@@ -1,0 +1,13 @@
+Initialize api
+Print API info
+Look for required files
+Look for database
+	Ask for login
+Take business info
+	Take business name
+	Take phone number
+	Take business address
+Init database
+	Take in db name
+	Setup database tables
+Welcome user	
