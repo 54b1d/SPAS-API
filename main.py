@@ -1,7 +1,7 @@
 # main file
+import functions
 
-def main():
-	print("Hello World")
+# from SqliteHelper import
 
 if __name__ == "__main__":
-	main()
+    functions.greetings()
