@@ -1,15 +1,32 @@
 import glob
 import os
+import sqlite3
 
 
 class SqliteHelper:
-    # setup software environment
+    # all database functions here
+    # creates sqlite cursor here
+
     def __init__(self):
-        # check if db exists
         self.dbname = get_dbname()
+        self.conn = None
+        self.cursor = None
+
+        # start cursor
+        self.open()
+
+    def open(self):
+        print("running open")
+        try:
+            self.conn = sqlite3.connect(self.dbname)
+            self.cursor = self.conn.cursor()
+            print('Sqlite version ' + sqlite3.version)
+        except sqlite3.Error as err:
+            print("Failed connecting to database..", err)
 
 
 def get_dbname(directory="db"):
+    # todo ask for directory if not found
     # check for existing *.db
     # list db to give selection choice
     # look for db in files with db ext
