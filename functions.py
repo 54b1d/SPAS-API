@@ -43,7 +43,7 @@ def get_dbname(directory="db"):
 
     if len(databases) == 0:
         print("No database found.\nEnter a new DB name.")
-        dbname = input("Name of database: ")
+        dbname = input("Name of database: ")+".db"
     else:
         print(databases)
         dbNumber = int(input("Choose a database number: "))
